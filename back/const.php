@@ -1,0 +1,268 @@
+<?php
+/**
+ * suimei.php
+ * 四柱推命　定数
+ */
+
+/**
+ * 定数
+ */
+define('SUIMEI_NUMBER_OF_KAN', 10);
+define('SUIMEI_NUMBER_OF_SHI', 12);
+define('SUIMEI_NUMBER_OF_KANSHI', 60);
+define('SUIMEI_NUMBER_OF_TSUHEN', 10);
+define('SUIMEI_NUMBER_OF_GOGYO', 5);
+define('SUIMEI_NUMBER_OF_ONMYO', 2);
+
+/**
+ * 十干
+ */
+define('SUIMEI_KAN_KINOE', 1); //甲
+define('SUIMEI_KAN_KINOTO', 2); //乙
+define('SUIMEI_KAN_HINOE', 3); //丙
+define('SUIMEI_KAN_HINOTO', 4); //丁
+define('SUIMEI_KAN_TSUCHINOE', 5); //戊
+define('SUIMEI_KAN_TSUCHINOTO', 6); //己
+define('SUIMEI_KAN_KANOE', 7); //庚
+define('SUIMEI_KAN_KANOTO', 8); //辛
+define('SUIMEI_KAN_MIZUNOE', 9); //壬
+define('SUIMEI_KAN_MIZUNOTO', 10); //癸
+
+/**
+ * 十二支
+ */
+define('SUIMEI_SHI_NE', 1); //子
+define('SUIMEI_SHI_USHI', 2); //丑
+define('SUIMEI_SHI_TORA', 3); //寅
+define('SUIMEI_SHI_U', 4); //卯
+define('SUIMEI_SHI_TATSU', 5); //辰
+define('SUIMEI_SHI_MI', 6); //巳
+define('SUIMEI_SHI_UMA', 7); //午
+define('SUIMEI_SHI_HITSUJI', 8); //未
+define('SUIMEI_SHI_SARU', 9); //申
+define('SUIMEI_SHI_TORI', 10); //酉
+define('SUIMEI_SHI_INU', 11); //戌
+define('SUIMEI_SHI_I', 12); //亥
+
+/**
+ * 六十干支
+ */
+define('SUIMEI_KANSHI_KINOE_NE', 1); //甲子
+define('SUIMEI_KANSHI_KINOTO_USHI', 2); //乙丑
+define('SUIMEI_KANSHI_HINOE_TORA', 3); //丙寅
+define('SUIMEI_KANSHI_HINOTO_U', 4); //丁卯
+define('SUIMEI_KANSHI_TSUCHINOE_TATSU', 5); //戊辰
+define('SUIMEI_KANSHI_TSUCHINOTO_MI', 6); //己巳
+define('SUIMEI_KANSHI_KANOE_UMA', 7); //庚午
+define('SUIMEI_KANSHI_KANOTO_HITSUJI', 8); //辛未
+define('SUIMEI_KANSHI_MIZUNOE_SARU', 9); //壬申
+define('SUIMEI_KANSHI_MIZUNOTO_TORI', 10); //壬申
+define('SUIMEI_KANSHI_KINOE_INU', 11); //甲戌
+define('SUIMEI_KANSHI_KINOTO_I', 12); //乙亥
+define('SUIMEI_KANSHI_HINOE_NE', 13); //丙子
+define('SUIMEI_KANSHI_HINOTO_USHI', 14); //丁丑
+define('SUIMEI_KANSHI_TSUCHINOE_TORA', 15); //戊寅
+define('SUIMEI_KANSHI_TSUCHINOTO_U', 16); //己卯
+define('SUIMEI_KANSHI_KANOE_TATSU', 17); //庚辰
+define('SUIMEI_KANSHI_KANOTO_MI', 18); //辛巳
+define('SUIMEI_KANSHI_MIZUNOE_UMA', 19); //壬午
+define('SUIMEI_KANSHI_MIZUNOTO_HITSUJI', 20); //癸未
+define('SUIMEI_KANSHI_KINOE_SARU', 21); //甲申
+define('SUIMEI_KANSHI_KINOTO_TORI', 22); //乙酉
+define('SUIMEI_KANSHI_HINOE_INU', 23); //丙戌
+define('SUIMEI_KANSHI_HINOTO_I', 24); //丁亥
+define('SUIMEI_KANSHI_TSUCHINOE_NE', 25); //戊子
+define('SUIMEI_KANSHI_TSUCHINOTO_USHI', 26); //己丑
+define('SUIMEI_KANSHI_KANOE_TORA', 27); //庚寅
+define('SUIMEI_KANSHI_KANOTO_U', 28); //庚卯
+define('SUIMEI_KANSHI_MIZUNOE_TATSU', 29); //壬辰
+define('SUIMEI_KANSHI_MIZUNOTO_MI', 30); //癸巳
+define('SUIMEI_KANSHI_KINOE_UMA', 31); //甲午
+define('SUIMEI_KANSHI_KINOTO_HITSUJI', 32); //乙未
+define('SUIMEI_KANSHI_HINOE_SARU', 33); //丙申
+define('SUIMEI_KANSHI_HINOTO_TORI', 34); //丁酉
+define('SUIMEI_KANSHI_TSUCHINOE_INU', 35); //戊戌
+define('SUIMEI_KANSHI_TSUCHINOTO_I', 36); //己亥
+define('SUIMEI_KANSHI_KANOE_NE', 37); //庚子
+define('SUIMEI_KANSHI_KANOTO_USHI', 38); //辛丑
+define('SUIMEI_KANSHI_MIZUNOE_TORA', 39); //丁酉
+define('SUIMEI_KANSHI_MIZUNOTO_U', 40); //癸卯
+define('SUIMEI_KANSHI_KINOE_TATSU', 41); //甲辰
+define('SUIMEI_KANSHI_KINOTO_MI', 42); //乙巳
+define('SUIMEI_KANSHI_HINOE_UMA', 43); //丙午
+define('SUIMEI_KANSHI_HINOTO_HITSUJI', 44); //丁未
+define('SUIMEI_KANSHI_TSUCHINOE_SARU', 45); //戊申
+define('SUIMEI_KANSHI_TSUCHINOTO_TORI', 46); //己酉
+define('SUIMEI_KANSHI_KANOE_INU', 47); //庚戌
+define('SUIMEI_KANSHI_KANOTO_I', 48); //辛亥
+define('SUIMEI_KANSHI_MIZUNOE_NE', 49); //壬子
+define('SUIMEI_KANSHI_MIZUNOTO_USHI', 50); //癸丑
+define('SUIMEI_KANSHI_KINOE_TORA', 51); //甲寅
+define('SUIMEI_KANSHI_KINOTO_U', 52); //乙卯
+define('SUIMEI_KANSHI_HINOE_TATSU', 53); //丙辰
+define('SUIMEI_KANSHI_HINOTO_MI', 54); //丁巳
+define('SUIMEI_KANSHI_TSUCHINOE_UMA', 55); //戊午
+define('SUIMEI_KANSHI_TSUCHINOTO_HITSUJI', 56); //己未
+define('SUIMEI_KANSHI_KANOE_SARU', 57); //庚申
+define('SUIMEI_KANSHI_KANOTO_TORI', 58); //辛酉
+define('SUIMEI_KANSHI_MIZUNOE_INU', 59); //壬戌
+define('SUIMEI_KANSHI_MIZUNOTO_I', 60); //癸亥
+
+//陰陽
+define('SUIMEI_ONMYO_IN', 0); //陰
+define('SUIMEI_ONMYO_YOU', 1); //陽
+
+//五行
+define('SUIMEI_GOGYO_MOKU', 1); //木
+define('SUIMEI_GOGYO_KA', 2); //火
+define('SUIMEI_GOGYO_DO', 3); //土
+define('SUIMEI_GOGYO_KIN', 4); //金
+define('SUIMEI_GOGYO_SUI', 5); //水
+
+
+/**
+ * 十干と五行の対応関係
+ */
+$kan_to_gogyo = [
+  SUIMEI_KAN_KINOE => SUIMEI_GOGYO_MOKU,
+  SUIMEI_KAN_KINOTO => SUIMEI_GOGYO_MOKU,
+  SUIMEI_KAN_HINOE => SUIMEI_GOGYO_KA,
+  SUIMEI_KAN_HINOTO => SUIMEI_GOGYO_KA,
+  SUIMEI_KAN_TSUCHINOE => SUIMEI_GOGYO_DO,
+  SUIMEI_KAN_TSUCHINOTO => SUIMEI_GOGYO_DO,
+  SUIMEI_KAN_KANOE => SUIMEI_GOGYO_KIN,
+  SUIMEI_KAN_KANOTO => SUIMEI_GOGYO_KIN,
+  SUIMEI_KAN_MIZUNOE => SUIMEI_GOGYO_SUI,
+  SUIMEI_KAN_MIZUNOTO => SUIMEI_GOGYO_SUI,
+];
+
+/**
+ * 十二支と五行の対応関係
+ */
+$shi_to_gogyo = [
+  SUIMEI_SHI_NE => SUIMEI_GOGYO_SUI,
+  SUIMEI_SHI_USHI => SUIMEI_GOGYO_DO,
+  SUIMEI_SHI_TORA => SUIMEI_GOGYO_MOKU,
+  SUIMEI_SHI_U => SUIMEI_GOGYO_MOKU,
+  SUIMEI_SHI_TATSU => SUIMEI_GOGYO_DO,
+  SUIMEI_SHI_MI => SUIMEI_GOGYO_KA,
+  SUIMEI_SHI_UMA => SUIMEI_GOGYO_KA,
+  SUIMEI_SHI_HITSUJI => SUIMEI_GOGYO_DO,
+  SUIMEI_SHI_SARU => SUIMEI_GOGYO_KIN,
+  SUIMEI_SHI_TORI => SUIMEI_GOGYO_KIN,
+  SUIMEI_SHI_INU => SUIMEI_GOGYO_DO,
+  SUIMEI_SHI_I => SUIMEI_GOGYO_SUI,
+];
+
+/**
+ * 十二支と五行の対応関係(蔵干を考慮)
+ */
+$shi_to_gogyo_multiple = [
+  SUIMEI_SHI_NE => [SUIMEI_GOGYO_SUI],
+  SUIMEI_SHI_USHI => [SUIMEI_GOGYO_DO, SUIMEI_GOGYO_SUI, SUIMEI_GOGYO_KIN],
+  SUIMEI_SHI_TORA => [SUIMEI_GOGYO_MOKU, SUIMEI_GOGYO_KA, SUIMEI_GOGYO_DO],
+  SUIMEI_SHI_U => [SUIMEI_GOGYO_MOKU],
+  SUIMEI_SHI_TATSU => [SUIMEI_GOGYO_DO, SUIMEI_GOGYO_MOKU, SUIMEI_GOGYO_SUI],
+  SUIMEI_SHI_MI => [SUIMEI_GOGYO_KA, SUIMEI_GOGYO_KIN, SUIMEI_GOGYO_DO],
+  SUIMEI_SHI_UMA => [SUIMEI_GOGYO_KA, SUIMEI_GOGYO_DO],
+  SUIMEI_SHI_HITSUJI => [SUIMEI_GOGYO_DO, SUIMEI_GOGYO_KA, SUIMEI_GOGYO_MOKU],
+  SUIMEI_SHI_SARU => [SUIMEI_GOGYO_KIN, SUIMEI_GOGYO_SUI, SUIMEI_GOGYO_DO],
+  SUIMEI_SHI_TORI => [SUIMEI_GOGYO_KIN],
+  SUIMEI_SHI_INU => [SUIMEI_GOGYO_DO, SUIMEI_GOGYO_KIN, SUIMEI_GOGYO_KA],
+  SUIMEI_SHI_I => [SUIMEI_GOGYO_SUI, SUIMEI_GOGYO_MOKU],
+];
+
+/**
+ * 十二支と蔵干の対応関係
+ * 子：癸
+ * 丑：己、癸、辛
+ * 寅：甲、丙、戊
+ * 卯：乙
+ * 辰：戊、乙、癸
+ * 巳：丙、庚、戊
+ * 午：丁、己
+ * 未：己、丁、乙
+ * 申：庚、壬、戊
+ * 酉：辛
+ * 戌：戊、辛、丁
+ * 亥：壬、甲
+ */
+$shi_to_zokan = [
+  SUIMEI_SHI_NE => [SUIMEI_KAN_MIZUNOTO],
+  SUIMEI_SHI_USHI => [SUIMEI_KAN_TSUCHINOTO, SUIMEI_KAN_MIZUNOTO, SUIMEI_KAN_KANOTO],
+  SUIMEI_SHI_TORA => [SUIMEI_KAN_KINOE, SUIMEI_KAN_HINOE, SUIMEI_KAN_TSUCHINOE],
+  SUIMEI_SHI_U => [SUIMEI_KAN_KINOTO],
+  SUIMEI_SHI_TATSU => [SUIMEI_KAN_TSUCHINOE, SUIMEI_KAN_KINOTO, SUIMEI_KAN_MIZUNOTO],
+  SUIMEI_SHI_MI => [SUIMEI_KAN_HINOE, SUIMEI_KAN_KANOE, SUIMEI_KAN_TSUCHINOE],
+  SUIMEI_SHI_UMA => [SUIMEI_KAN_HINOTO, SUIMEI_KAN_TSUCHINOTO],
+  SUIMEI_SHI_HITSUJI => [SUIMEI_KAN_TSUCHINOTO, SUIMEI_KAN_HINOTO, SUIMEI_KAN_KINOTO],
+  SUIMEI_SHI_SARU => [SUIMEI_KAN_KANOE, SUIMEI_KAN_MIZUNOE, SUIMEI_KAN_TSUCHINOE],
+  SUIMEI_SHI_TORI => [SUIMEI_KAN_KANOTO],
+  SUIMEI_SHI_INU => [SUIMEI_KAN_TSUCHINOE, SUIMEI_KAN_KANOTO, SUIMEI_KAN_HINOTO],
+  SUIMEI_SHI_I => [SUIMEI_KAN_MIZUNOE, SUIMEI_KAN_KINOE],
+];
+
+/**
+ * 十干　日本語マスタ
+ */
+$mst_kan = [
+  SUIMEI_KAN_KINOE => '甲',
+  SUIMEI_KAN_KINOTO => '乙',
+  SUIMEI_KAN_HINOE => '丙',
+  SUIMEI_KAN_HINOTO => '丁',
+  SUIMEI_KAN_TSUCHINOE => '戊',
+  SUIMEI_KAN_TSUCHINOTO => '己',
+  SUIMEI_KAN_KANOE => '庚',
+  SUIMEI_KAN_KANOTO => '辛',
+  SUIMEI_KAN_MIZUNOE => '壬',
+  SUIMEI_KAN_MIZUNOTO => '癸',
+];
+
+/**
+ * 十二支　日本語マスタ
+ */
+$mst_shi = [
+  SUIMEI_SHI_NE => '子',
+  SUIMEI_SHI_USHI => '丑',
+  SUIMEI_SHI_TORA => '寅',
+  SUIMEI_SHI_U => '卯',
+  SUIMEI_SHI_TATSU => '辰',
+  SUIMEI_SHI_MI => '巳',
+  SUIMEI_SHI_UMA => '午',
+  SUIMEI_SHI_HITSUJI => '未',
+  SUIMEI_SHI_SARU => '申',
+  SUIMEI_SHI_TORI => '酉',
+  SUIMEI_SHI_INU => '戌',
+  SUIMEI_SHI_I => '亥',
+];
+
+/**
+ * 五行　日本語マスタ
+ */
+$mst_gogyo = [
+  SUIMEI_GOGYO_MOKU => '木',
+  SUIMEI_GOGYO_KA => '火',
+  SUIMEI_GOGYO_DO => '土',
+  SUIMEI_GOGYO_KIN => '金',
+  SUIMEI_GOGYO_SUI => '水',
+];
+
+/**
+ * 陰陽　日本語マスタ
+ */
+$mst_onmyo = [
+  SUIMEI_ONMYO_IN => '-',
+  SUIMEI_ONMYO_YOU => '+',
+];
+
+/**
+ * 通変星 日本語マスタ
+ */
+//陽干の場合の並び
+$mst_tsuhen_you = [
+  '比肩', '敗財', '食神', '傷官', '偏財', '正財', '偏官', '正官', '偏印', '印綬'
+];
+//陰干の場合の並び
+$mst_tsuhen_in = [
+  '比肩', '傷官', '食神', '正財', '偏財', '正官', '偏官', '印綬', '偏印', '劫財'
+];
