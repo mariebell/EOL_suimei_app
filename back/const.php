@@ -119,6 +119,20 @@ define('SUIMEI_GOGYO_DO', 3); //土
 define('SUIMEI_GOGYO_KIN', 4); //金
 define('SUIMEI_GOGYO_SUI', 5); //水
 
+/**
+ * 通変星
+ */
+define('SUIMEI_TSUHEN_HIKEN', 1); //比肩
+define('SUIMEI_TSUHEN_GOZAI', 2); //劫財
+define('SUIMEI_TSUHEN_SHOKUSHIN', 3); //食神
+define('SUIMEI_TSUHEN_SHOKAN', 4); //傷官
+define('SUIMEI_TSUHEN_HENZAI', 5); //偏財
+define('SUIMEI_TSUHEN_SEIZAI', 6); //正財
+define('SUIMEI_TSUHEN_HENKAN', 7); //偏官
+define('SUIMEI_TSUHEN_SEIKAN', 8); //正官
+define('SUIMEI_TSUHEN_HENIN', 9); //偏印
+define('SUIMEI_TSUHEN_INJU', 10); //印綬
+
 
 /**
  * 十干と五行の対応関係
@@ -256,13 +270,37 @@ $mst_onmyo = [
 ];
 
 /**
- * 通変星 日本語マスタ
+ * 通変星　日本語マスタ
  */
+$mst_tsuhen = [
+  SUIMEI_TSUHEN_HIKEN => '比肩',
+  SUIMEI_TSUHEN_GOZAI => '劫財',
+  SUIMEI_TSUHEN_SHOKUSHIN => '食神',
+  SUIMEI_TSUHEN_SHOKAN => '傷官',
+  SUIMEI_TSUHEN_HENZAI => '偏財',
+  SUIMEI_TSUHEN_SEIZAI => '正財',
+  SUIMEI_TSUHEN_HENKAN => '偏官',
+  SUIMEI_TSUHEN_SEIKAN => '正官',
+  SUIMEI_TSUHEN_HENIN => '偏印',
+  SUIMEI_TSUHEN_INJU => '印綬',
+];
+
+
 //陽干の場合の並び
-$mst_tsuhen_you = [
-  '比肩', '敗財', '食神', '傷官', '偏財', '正財', '偏官', '正官', '偏印', '印綬'
+$tsuhen_order_you = [
+  SUIMEI_TSUHEN_HIKEN, SUIMEI_TSUHEN_GOZAI,
+  SUIMEI_TSUHEN_SHOKUSHIN, SUIMEI_TSUHEN_SHOKAN,
+  SUIMEI_TSUHEN_HENZAI, SUIMEI_TSUHEN_SEIZAI,
+  SUIMEI_TSUHEN_HENKAN, SUIMEI_TSUHEN_SEIKAN,
+  SUIMEI_TSUHEN_HENIN, SUIMEI_TSUHEN_INJU,
 ];
+
 //陰干の場合の並び
-$mst_tsuhen_in = [
-  '比肩', '傷官', '食神', '正財', '偏財', '正官', '偏官', '印綬', '偏印', '劫財'
+$tsuhen_order_in = [
+  SUIMEI_TSUHEN_HIKEN, SUIMEI_TSUHEN_SHOKAN,
+  SUIMEI_TSUHEN_SHOKUSHIN, SUIMEI_TSUHEN_SEIZAI,
+  SUIMEI_TSUHEN_HENZAI, SUIMEI_TSUHEN_SEIKAN,
+  SUIMEI_TSUHEN_HENKAN, SUIMEI_TSUHEN_INJU,
+  SUIMEI_TSUHEN_HENIN, SUIMEI_TSUHEN_GOZAI,
 ];
+

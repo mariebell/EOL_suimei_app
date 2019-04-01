@@ -34,16 +34,15 @@ $exp_kan = [
   をあやつることが特異であり、想像力も豊かです。悪くすると邪推と偏見の人となります。しつこく絡むことも。"
 ];
 
-/*$exp_tsuhen = [
-  SUIMEI_TSUHEN_HIKEN => '比肩の人は、自分の信念にしたがって一生懸命努力する人です。
-  とても向上心があります。悪く出ると周囲との話を乱す恐れもあります。',
-  SUIMEI_TSUHEN_GOZAI => '',
-  SUIMEI_TSUHEN_SHOKUSHIN => '',
-  SUIMEI_TSUHEN_SHOKAN => '',
-  SUIMEI_TSUHEN_HENZAI => '',
-  SUIMEI_TSUHEN_SEIZAI => '',
-  SUIMEI_TSUHEN_HENKAN => '',
-  SUIMEI_TSUHEN_SEIKAN => '',
-  SUIMEI_TSUHEN_HENIN => '',
-  SUIMEI_TSUHEN_INJU => '',
-];*/
+$exp_tsuhen = [
+  SUIMEI_TSUHEN_HIKEN => '比肩の人は、自分の信念にしたがって一生懸命努力する人です。',
+  SUIMEI_TSUHEN_GOZAI => '劫財の人は、表面上は聞き分けが良さそうですが内面は強情なところがあります。',
+  SUIMEI_TSUHEN_SHOKUSHIN => '食神の人は、楽しいこと・綺麗なことが好きです。',
+  SUIMEI_TSUHEN_SHOKAN => '傷官の人は、職人・アーティスト的な鋭い感性を持ちます。',
+  SUIMEI_TSUHEN_HENZAI => '偏財の人は、社交家で人を楽しませることが得意です。ちゃっかりしている人です。',
+  SUIMEI_TSUHEN_SEIZAI => '正財の人は、しっかりしている人です。不確実性のあるものは敬遠する傾向です。',
+  SUIMEI_TSUHEN_HENKAN => '偏官の人は、達成主義の人です。与えられた課題を解決するための強い実行力を持ちます。',
+  SUIMEI_TSUHEN_SEIKAN => '正官の人は、お手本となる人です。組織のルールを重んじます。',
+  SUIMEI_TSUHEN_HENIN => '偏印の人は、マニアックな知識を追求する人です。',
+  SUIMEI_TSUHEN_INJU => '印綬の人は、先人の知恵を重んじる人です。',
+];

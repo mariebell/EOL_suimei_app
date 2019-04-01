@@ -222,7 +222,8 @@ class Meishiki extends Kanshi
         $this->{$kan}['color_class'] = $this->getColorCode($this->{$pillar}['id'], 'kan');
 
         //通変星
-        $this->{$kan}['tsuhen'] = $this->getTsuhen($nikkan, $this->{$kan}['id']);
+        $this->{$kan}['tsuhen'] = $this->getTsuhen($nikkan, $this->{$kan}['id'], false);
+        $this->{$kan}['tsuhen_ja'] = $this->getTsuhen($nikkan, $this->{$kan}['id'], true);
       }
 
       //地支の情報をセット
@@ -241,7 +242,8 @@ class Meishiki extends Kanshi
         $this->{$shi}['zokan_ja'] = $this->getZokan($this->{$shi}['id'], true);
 
         //通変星
-        $this->{$shi}['tsuhen'] = $this->getTsuhenOfArray($nikkan, $this->{$shi}['zokan']);
+        $this->{$shi}['tsuhen'] = $this->getTsuhenOfArray($nikkan, $this->{$shi}['zokan'], false);
+        $this->{$shi}['tsuhen_ja'] = $this->getTsuhenOfArray($nikkan, $this->{$shi}['zokan'], true);
       }
 
       //$infoに命式の周辺情報をセット
@@ -478,19 +480,20 @@ class Meishiki extends Kanshi
      * 天干にとっての通変を返す
      * @param int $tenkan
      * @param int $target
+     * @param bool $inJp
      * @return string
      */
-    private function getTsuhen($tenkan, $target)
+    private function getTsuhen($tenkan, $target, $inJp = true)
     {
-      global $mst_tsuhen_in, $mst_tsuhen_you;
+      global $mst_tsuhen, $tsuhen_order_in, $tsuhen_order_you;
       //天干との距離を計算
       $dist = intval($target) - intval($tenkan);
       $dist = $dist < 0 ? $dist + SUIMEI_NUMBER_OF_TSUHEN : $dist;
 
       if (intval($tenkan) % SUIMEI_NUMBER_OF_ONMYO === SUIMEI_ONMYO_IN) {
-        return $mst_tsuhen_in[$dist];
-      } else if ($tenkan % SUIMEI_NUMBER_OF_ONMYO === SUIMEI_ONMYO_YOU) {
-        return $mst_tsuhen_you[$dist];
+        return $inJp ? $mst_tsuhen[$tsuhen_order_in[$dist]] : $tsuhen_order_in[$dist];
+      } else if (intval($tenkan) % SUIMEI_NUMBER_OF_ONMYO === SUIMEI_ONMYO_YOU) {
+        return $inJp ? $mst_tsuhen[$tsuhen_order_you[$dist]] : $tsuhen_order_you[$dist];
       }
     }
 
@@ -498,15 +501,16 @@ class Meishiki extends Kanshi
      * 干配列から通変星を取得
      * @param int $tenkan
      * @param array $targets
+     * @param bool $inJp
      * @return array $tsuhens
      */
-    private function getTsuhenOfArray($tenkan, $targets)
+    private function getTsuhenOfArray($tenkan, $targets, $inJp = true)
     {
       $tsuhens = [];
       foreach($targets as $target)
       {
         //日干番号を取得
-        $tsuhens[] = $this->getTsuhen($tenkan, $target);
+        $tsuhens[] = $this->getTsuhen($tenkan, $target, $inJp);
       }
       return $tsuhens;
     }

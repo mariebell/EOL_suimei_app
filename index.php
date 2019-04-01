@@ -39,45 +39,34 @@
               <h3>あなたの月干通変星</h3>
           </div>
           <div class="row p-3">
-            <div class="col display-4 text-center"><?= $m->gekkan['tsuhen'] ?></div>
+            <div class="col display-4 text-center"><?= $m->gekkan['tsuhen_ja'] ?></div>
             <div class="col display-4 text-center"><?= $m->info['count_elements'][$m->gekkan['element']]*12.5 ?></div>
           </div>
           <div class="row p-3">
             月干通変星は主にあなたの外面的性格を表します。<br>
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
+            <?= $exp_tsuhen[$m->gekkan['tsuhen']]; ?>
           </div>
           <div class="row p-3 justify-content-center">
               <h3>あなたの元命通変星</h3>
           </div>
           <div class="row p-3">
-            <div class="col display-4 text-center"><?= $m->gesshi['tsuhen'][0] ?></div>
+            <div class="col display-4 text-center"><?= $m->gesshi['tsuhen_ja'][0] ?></div>
             <div class="col display-4 text-center"><?= $m->info['count_elements'][$m->gesshi['element']]*12.5 ?></div>
           </div>
-          <div class="row justify-content-center p-3">
+          <div class="row p-3">
             元命通変星は主にあなたの内面的性格を表します。<br>
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
+            <?= $exp_tsuhen[$m->gesshi['tsuhen'][0]]; ?>
           </div>
           <div class="row p-3 justify-content-center">
               <h3>あなたの年干通変星</h3>
           </div>
           <div class="row justify-content-center p-3">
-            <div class="col display-4 text-center"><?= $m->nenkan['tsuhen'] ?></div>
+            <div class="col display-4 text-center"><?= $m->nenkan['tsuhen_ja'] ?></div>
             <div class="col display-4 text-center"><?= $m->info['count_elements'][$m->nenkan['element']]*12.5 ?></div>
           </div>
-          <div class="row justify-content-center p-3">
-            年干通変星は主にあなたの青少年期の性格、成人後の補助的性格を表します。<br>
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
-            ここに説明が入ります。ここに説明が入ります。ここに説明が入ります。
+          <div class="row p-3">
+            年干通変星は主にあなたの青少年期の性格を表します。<br>
+            <?= $exp_tsuhen[$m->nenkan['tsuhen']]; ?>
           </div>
 
         </div>

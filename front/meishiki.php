@@ -79,33 +79,33 @@
   <div class="row text-center text-white">
   <?php if($m->isHourSet) { ?>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->jikan['color_class'] ?> display-5 py-2 ">
-      <?= $m->jikan['tsuhen']; ?>
+      <?= $m->jikan['tsuhen_ja']; ?>
     </div>
   <?php } ?>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->nikkan['color_class'] ?> display-5 py-2 ">
-      <?= $m->nikkan['tsuhen']; ?>
+      <?= $m->nikkan['tsuhen_ja']; ?>
     </div>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->gekkan['color_class'] ?> display-5 py-2 ">
-      <?= $m->gekkan['tsuhen']; ?>
+      <?= $m->gekkan['tsuhen_ja']; ?>
     </div>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->nenkan['color_class'] ?> display-5 py-2 ">
-      <?= $m->nenkan['tsuhen']; ?>
+      <?= $m->nenkan['tsuhen_ja']; ?>
     </div>
   </div>
   <div class="row text-center text-white">
   <?php if($m->isHourSet) { ?>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->jishi['color_class'] ?> display-5 py-2">
-      <?= implode(' - ', $m->jishi['tsuhen']); ?>
+      <?= implode(' - ', $m->jishi['tsuhen_ja']); ?>
     </div>
   <?php } ?>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->nisshi['color_class'] ?> display-5 py-2">
-      <?= implode(' - ', $m->nisshi['tsuhen']); ?>
+      <?= implode(' - ', $m->nisshi['tsuhen_ja']); ?>
     </div>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->gesshi['color_class'] ?> display-5 py-2">
-      <?= implode(' - ', $m->gesshi['tsuhen']); ?>
+      <?= implode(' - ', $m->gesshi['tsuhen_ja']); ?>
     </div>
     <div class="col <?= $m->isHourSet ? 'col-3':'col-4' ?> <?= $m->nenshi['color_class'] ?> display-5 py-2">
-      <?= implode(' - ', $m->nenshi['tsuhen']); ?>
+      <?= implode(' - ', $m->nenshi['tsuhen_ja']); ?>
     </div>
   </div>
 </div>
